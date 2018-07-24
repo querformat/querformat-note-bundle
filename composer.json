@@ -36,16 +36,16 @@
         "symfony/phpunit-bridge": "^3.2"
     },
     "extra": {
-        "contao-manager-plugin": "Querformat\\QuerformatNoteBundle\\ContaoManager\\Plugin"
+        "contao-manager-plugin": "Querformat\\NoteBundle\\ContaoManager\\Plugin"
     },
     "autoload": {
         "psr-4": {
-            "Querformat\\QuerformatNoteBundle\\": "src/"
+            "Querformat\\NoteBundle\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Querformat\\QuerformatNoteBundle\\Tests\\": "tests/"
+            "Querformat\\NoteBundle\\Tests\\": "tests/"
         }
     },
     "support": {

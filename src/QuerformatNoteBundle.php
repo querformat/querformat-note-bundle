@@ -8,7 +8,7 @@
  * @license LGPL-3.0-or-later
  */
 
-namespace Querformat\QuerformatNoteBundle;
+namespace Querformat\NoteBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
