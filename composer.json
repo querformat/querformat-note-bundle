@@ -19,7 +19,7 @@
         "php": "^5.6 || ^7.1",
         "contao/core-bundle": "4.4.*",
         "symfony/framework-bundle": "^3.3",
-        "querformat/querformat-note-bundle": "dev-develop"
+        "querformat/querformat-note-bundle": "dev-master"
     },
     "conflict": {
         "contao/core": "*",
