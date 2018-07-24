@@ -8,4 +8,13 @@
  * @license LGPL-3.0-or-later
  */
 
-// Back end modules BRAUCH ICH DAS?
+// Back end modules
+
+$GLOBALS['BE_MOD']['content']['note'] = array
+(
+
+        'tables'      => array('tl_note')
+
+);
+
+
