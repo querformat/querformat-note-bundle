@@ -13,8 +13,14 @@
 $GLOBALS['BE_MOD']['content']['note'] = array
 (
 
-        'tables'      => array('tl_note')
+    'tables' => array('tl_content')
 
 );
 
+// Front end modules
+$GLOBALS['FE_MOD']['note'] = array
 
+(
+    'qfNoteTitle' => 'ModuleQfNote'
+
+);
