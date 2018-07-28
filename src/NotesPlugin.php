@@ -21,8 +21,8 @@ class NotesPlugin
 
             $note = $this->getNoteIfExists($objElement->id);
 
-            if ($note != false && $note['qfNoteActivate'] == 1) {
-                return $strBuffer . '<h3>' . $note['qfNoteTitle'] . '</h3>' . '<p>' . $note['qfNoteText'] . '</p>';
+            if ($note != false && $note['qfNoteActivate']) {
+                return $strBuffer . $this->getNoteHtml($note);
             }
 
         endif;
@@ -52,5 +52,18 @@ class NotesPlugin
         return $currentUser->getData()['qfNoteFeActive'];
     }
 
+    private function getNoteHtml($note)
+    {
+        $returnHtml = '<div class="qf-note">';
+        $returnHtml .= '<svg id="Ebene_1" data-name="Ebene 1" viewBox="0 0 38 38">';
+        $returnHtml .= '<path d="M27 21.66V27a2 2 0 0 1-2 2H11a2 2 0 0 1-2-2V13a2 2 0 0 1 2-2h5.34" class="qf-edit"/>';
+        $returnHtml .= '<path d="M25 9l4 4-10 10h-4v-4L25 9z" class="qf-edit"/>';
+        $returnHtml .= '</svg>';
+        $returnHtml .= '<div class="qf-note__content">';
+        $returnHtml .= '<p class="qf-note__title">' . $note['qfNoteTitle'] . '</p>';
+        $returnHtml .= '<p class="qf-note__text">' . $note['qfNoteText'] . '</p>';
+        $returnHtml .= '</div></div>';
+        return $returnHtml;
+    }
 
 }
