@@ -10,17 +10,13 @@
 
 // Back end modules
 
-$GLOBALS['BE_MOD']['content']['note'] = array
-(
-
+$GLOBALS['BE_MOD']['content']['note'] = array(
     'tables' => array('tl_content')
-
 );
 
-// Front end modules
-$GLOBALS['FE_MOD']['note'] = array
+if (TL_MODE == 'FE') {
+    $GLOBALS['TL_CSS'][] = 'bundles/querformatnote/assets/css/qfNotesPlugin.css|static';
+    $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/querformatnote/assets/js/qfNotesPlugin.js|static';
+}
 
-(
-    'qfNoteTitle' => 'ModuleQfNote'
-
-);
+$GLOBALS['TL_HOOKS']['getContentElement'][] = ['Querformat\\NoteBundle\\NotesPlugin', 'myGetContentElement'];
