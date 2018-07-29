@@ -4,10 +4,24 @@
 
     $(document).ready(function () {
 
+        let $qfNotesSvg = $('.qf-note__svg');
         let $qfNotes = $('.qf-note');
 
-        $qfNotes.click(function () {
-            $(this).find('.qf-note__content').toggleClass('qf-note__content--active');
+        $(document).click(function () {
+
+            $qfNotesSvg.each(function () {
+                $(this).next().removeClass('qf-note__content--active');
+            });
+
+        });
+
+        $qfNotes.click(function (event) {
+            event.stopImmediatePropagation();
+        });
+
+        $qfNotesSvg.click(function (event) {
+            event.stopImmediatePropagation();
+            $(this).next().toggleClass('qf-note__content--active');
         });
 
     });

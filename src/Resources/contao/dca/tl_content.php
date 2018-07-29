@@ -2,10 +2,9 @@
 
 $dcaTemplates = $GLOBALS['TL_DCA'];
 
-
 foreach ($dcaTemplates as $dcaKey => $dcaTemplate) {
 
-    if ($dcaKey == 'tl_content' || $dcaKey == 'tl_article' || $dcaKey == 'tl_dma_eg'):
+    if ($dcaKey == 'tl_content' || $dcaKey == 'tl_dma_eg'):
 
         $currentPalettes = $GLOBALS['TL_DCA'][$dcaKey]['palettes'];
 
@@ -46,9 +45,8 @@ foreach ($dcaTemplates as $dcaKey => $dcaTemplate) {
             'exclude' => true,
             'search' => true,
             'inputType' => 'text',
-            'eval' => array('mandatory' => true, 'rte' => 'tinyMCE', 'helpwizard' => true),
             'explanation' => 'insertTags',
-            'sql' => "mediumtext NULL"
+            'sql' => "text NULL"
         );
 
     endif;

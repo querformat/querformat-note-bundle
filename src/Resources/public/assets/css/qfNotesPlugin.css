@@ -14,11 +14,8 @@
     font-family: 'Varela Round';
     text-align: left;
     width: auto;
-    -webkit-transform: translateY(-50px);
-    -moz-transform: translateY(-50px);
-    -ms-transform: translateY(-50px);
-    -o-transform: translateY(-50px);
-    transform: translateY(-50px);
+    right: 0;
+    top: 0;
 }
 
 .qf-note .qf-edit {
@@ -33,7 +30,7 @@
     visibility: hidden;
     opacity: 0;
     background-color: #fffdb5;
-    transition: opacity 1s ease;
+    transition: opacity 500ms ease;
     pointer-events: none;
     max-width: 250px;
     width: 100%;

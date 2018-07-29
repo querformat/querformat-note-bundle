@@ -2,13 +2,11 @@
 
 $palettes = $GLOBALS['TL_DCA']['tl_user']['palettes'];
 
-
 foreach ($palettes as $k => $v) {
     if ($k != '__selector__') {
         $GLOBALS['TL_DCA']['tl_user']['palettes'][$k] .= ';{Notizmodul},qfNoteFeActive';
     }
 }
-
 
 $GLOBALS['TL_DCA']['tl_user']['fields']['qfNoteFeActive'] = array
 (
