@@ -16,6 +16,7 @@ use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
 use Querformat\NoteBundle\QuerformatNoteBundle;
+use DMA\DMAElementGeneratorCallbacks;
 
 class Plugin implements BundlePluginInterface
 {
@@ -26,7 +27,10 @@ class Plugin implements BundlePluginInterface
     {
         return [
             BundleConfig::create(QuerformatNoteBundle::class)
-                ->setLoadAfter([ContaoCoreBundle::class]),
+                ->setLoadAfter([
+                    ContaoCoreBundle::class,
+                    DMAElementGeneratorCallbacks::class
+                ]),
         ];
     }
 }

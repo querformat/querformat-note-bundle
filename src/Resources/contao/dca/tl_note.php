@@ -15,19 +15,6 @@ $GLOBALS['TL_DCA']['tl_note'] = array
             (
                 'id' => 'primary'
             )
-        ),
-        'onload_callback' => array
-        (
-            array('tl_note', 'checkPermission'),
-            array('tl_note', 'updateStyleSheet')
-        ),
-        'oncopy_callback' => array
-        (
-            array('tl_note', 'scheduleUpdate')
-        ),
-        'onsubmit_callback' => array
-        (
-            array('tl_note', 'scheduleUpdate')
         )
     ),
 

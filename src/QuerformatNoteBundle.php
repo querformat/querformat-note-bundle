@@ -12,6 +12,7 @@ namespace Querformat\NoteBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
+
 class QuerformatNoteBundle extends Bundle
 {
 }
