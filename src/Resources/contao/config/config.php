@@ -23,7 +23,7 @@ if (TL_MODE == 'FE') {
 
 // Hooks
 $GLOBALS['TL_HOOKS']['getContentElement'][] = ['Querformat\\NoteBundle\\NotesPlugin', 'displayNotes'];
-// $GLOBALS['TL_HOOKS']['getPageLayout'][] = ['Querformat\\NoteBundle\\NotesPlugin', 'addNotesToolbar'];
+$GLOBALS['TL_HOOKS']['generatePage'][] = ['Querformat\\NoteBundle\\NotesPlugin', 'setNoteCookie'];
 
 
 // DMA-Elemente zeigen kein Notizmodul trotz Vorhandensein der Einstellung
@@ -41,3 +41,4 @@ class MyClass
     }
 }
 */
+

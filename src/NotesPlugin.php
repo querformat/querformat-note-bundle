@@ -1,5 +1,6 @@
 <?php
 
+
 namespace Querformat\NoteBundle;
 
 use Contao\ContentModel;
@@ -18,12 +19,12 @@ class NotesPlugin extends \Frontend
      */
     public function displayNotes(ContentModel $objElement, $strBuffer)
     {
-        if ($this->showNotesToCurrentUser()):
+        if (!empty($_COOKIE['qfNoteBundle']) || isset($_GET['notiz'])):
 
             //$note = $this->getNoteIfExists($objElement->id);
 
             // $note['qfNoteActivate'] gibt ein boolschen Wert zurück (true == 1, false == 0) und
-            // kann deswegen ohne vergleichsoperator direkt in die If-Abfrage gschrieben werden.
+            // kann deswegen ohne vergleichsoperator direkt in die If-Abfrage geschrieben werden.
             /** @var Boolean $note */
 
             if ($objElement->qfNoteActivate == 1) {
@@ -41,11 +42,34 @@ class NotesPlugin extends \Frontend
      *
      * @return boolean
      */
+
     private function showNotesToCurrentUser()
     {
         $currentUser = BackendUser::getInstance();
         return $currentUser->getData()['qfNoteFeActive'];
     }
+
+    public function setNoteCookie()
+    {
+
+        if ($_SERVER['QUERY_STRING'] == 'notiz'):
+            setcookie('qfNoteBundle', 'user', time() + 3600, '/');
+
+        endif;
+    }
+
+    // MyClass.php
+    /* public function myGenerateFrontendUrl( $strUrl)
+     {
+         echo 2;
+         if(isset($_GET['notiz']))
+         echo 1;
+         //return str_replace('.info', '.info/notiz', $strUrl);
+
+         $noteUrl = $strUrl.'?notiz';
+         return $noteUrl;
+
+     }*/
 
     /**
      * @param $note
