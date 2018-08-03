@@ -24,8 +24,6 @@ class tl_content_qf extends tl_content
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['qfNoteActivate'] = 'qfNoteTitle,qfNoteText';
 
 
-//if($dcaKey == 'tl_dma_eg')
-//    $dcaKey = $dcaKey.'_fields';
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['qfNoteActivate'] = array
 (
@@ -58,9 +56,5 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['qfNoteText'] = array
     'sql' => "text NULL"
 );
 
-#echo '<pre>';
-#print_r( $GLOBALS['TL_DCA'][$dcaKey]);
-
-#echo '</pre>';
 
 

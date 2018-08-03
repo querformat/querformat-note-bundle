@@ -14,8 +14,8 @@
     font-family: 'Varela Round';
     text-align: left;
     width: auto;
-    right: 0;
-    top: 0;
+    margin-left: 10px;
+    margin-top: -10px;
 }
 
 .qf-note .qf-edit {
@@ -29,31 +29,37 @@
 .qf-note__content {
     visibility: hidden;
     opacity: 0;
-    background-color: #fffdb5;
+    background: url("../img/qf-noteBG.jpg");
+    background-size: 100px;
     transition: opacity 500ms ease;
     pointer-events: none;
     max-width: 250px;
     width: 100%;
-    padding: 10px;
+    padding: 20px 15px;
     position: relative;
-    top: -30px;
+    top: -10px;
+    left: 10px;
     z-index: 0;
-    border-radius: 5px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .qf-note__content p {
     color: #444;
+    margin-top: 5px;
 }
 
 .qf-note svg {
-    background: #fffdb5;
-    width: 50px;
+    padding: 8px 5px;
+    background: #cad244;
+    border-left: 5px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
-    border-radius: 25px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-    position: relative;
+    display: block;
+    height: 40px;
+    margin-right: 15px;
     z-index: 1;
+    color: white;
+    position: relative;
 }
 
 .qf-note svg:hover {
@@ -63,7 +69,7 @@
 .qf-note__content--active {
     pointer-events: auto;
     visibility: visible;
-    opacity: 0.9;
+    opacity: 1;
 }
 
 .qf-note__title {
@@ -76,9 +82,121 @@ p.qf-note__text {
 }
 
 .qf-note__text {
-    background: #efefef;
-    border: 1px solid #333;
-    border-radius: 5px;
     padding: 5px;
+}
+
+/* TOOLBAR */
+
+.qf-toolbar {
+    display: flex;
+    flex-direction: row;
+    max-height: 55px;
+    background: url("../img/qf-noteBG.jpg");
+    background-size: 100px;
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.qf-note__nav {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.qf-toolbar svg {
+    width: 25px;
+    z-index: 1;
+    color: #fff;
+}
+
+.qf-note__visible {
+    cursor: pointer;
+}
+
+.qf-note__visible:hover svg {
+    color: #21557d;
+}
+
+.qf-note__visible, .qf-note__info {
+    padding: 5px 10px;
+    background: #cad244;
+    border-left: 5px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
+    display: block;
+    height: 35px;
+    margin-right: 15px;
+}
+
+.qf-note__hide {
+    display: none;
+}
+
+.qf-note__show {
+    display: block;
+}
+
+.qf-note__toogle .qf-note__hide {
+    display: block;
+}
+
+.qf-note__toogle .qf-note__show {
+    display: none;
+}
+
+.qf-note__close {
+    cursor: pointer;
+    padding: 5px 10px;
+    background: #21557d;
+    border-left: 5px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    display: block;
+    height: 35px;
+    margin-right: 20px;
+}
+
+.qf-note__infobox {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    background: #fefefe;
+    max-width: 250px;
+    box-sizing: border-box;
+    z-index: 998;
+    left: 30px;
+    padding: 0 10px 10px 10px;
+    box-shadow: 0 0 0px 2px rgba(204, 209, 93, 1);
+}
+
+.qf-note__infobox img {
+    width: 250px;
+    position: relative;
+    left: -14px;
+    top: -10px;
+
+}
+
+.qf-note__infobox p {
+    font-family: 'Varela Round';
+    font-size: 15px;
+}
+
+.qf-note__infobox:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: #fefefe;
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -10px;
+    margin-bottom: -20px;
 }

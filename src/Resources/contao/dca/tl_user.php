@@ -1,5 +1,5 @@
 <?php
-
+/*
 $palettes = $GLOBALS['TL_DCA']['tl_user']['palettes'];
 
 foreach ($palettes as $k => $v) {
@@ -16,4 +16,4 @@ $GLOBALS['TL_DCA']['tl_user']['fields']['qfNoteFeActive'] = array
     'inputType' => 'checkbox',
     'eval' => array('submitOnChange' => true),
     'sql' => "char(1) NOT NULL default ''",
-);
+); */
