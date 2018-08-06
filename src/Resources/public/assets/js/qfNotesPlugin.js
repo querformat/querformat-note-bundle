@@ -62,6 +62,8 @@
             qfSetCoor('resize')
         });
 
+        /* TOOLBAR */
+
 
         $('.qf-note__visible').on('click', function () {
             $(this).toggleClass('qf-note__toogle');
