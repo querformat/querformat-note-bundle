@@ -1,36 +1,37 @@
 {
-    "name": "querformat/note-bundle",
-    "type": "contao-bundle",
-    "description": "Note application",
-    "license": "LGPL-3.0-or-later",
-    "authors": [
-        {
-            "name": "Maria Engel",
-            "homepage": "https://www.querformat.info/"
-        }
-    ],
-    "require": {
-      "php": ">=7.1",
-      "contao/core-bundle":"~4.4"
-    },
-    "require-dev": {
-      "contao/manager-plugin": "^2.0"
-    },
-    "conflict": {
-      "contao/core": "*",
-      "contao/manager-plugin": "<2.0 || >=3.0"
-    },
-    "extra": {
-        "contao-manager-plugin": "Querformat\\NoteBundle\\ContaoManager\\Plugin"
-    },
-    "autoload": {
-        "psr-4": {
-            "Querformat\\NoteBundle\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Querformat\\NoteBundle\\Tests\\": "tests/"
-        }
+  "name": "querformat/note-bundle",
+  "type": "contao-bundle",
+  "description": "Note application",
+  "license": "LGPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Maria Engel",
+      "homepage": "https://www.querformat.info/"
     }
+  ],
+  "require": {
+    "php": ">=7.1",
+    "contao/core-bundle": "~4.4",
+    "dma/dma_elementgenerator": "dev-develop"
+  },
+  "require-dev": {
+    "contao/manager-plugin": "^2.0"
+  },
+  "conflict": {
+    "contao/core": "*",
+    "contao/manager-plugin": "<2.0 || >=3.0"
+  },
+  "extra": {
+    "contao-manager-plugin": "Querformat\\NoteBundle\\ContaoManager\\Plugin"
+  },
+  "autoload": {
+    "psr-4": {
+      "Querformat\\NoteBundle\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Querformat\\NoteBundle\\Tests\\": "tests/"
+    }
+  }
 }
