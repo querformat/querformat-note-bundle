@@ -6,7 +6,7 @@ namespace Querformat\NoteBundle;
 use Contao\ContentModel;
 
 
-class NotesPlugin extends \Frontend
+class NotesPlugin
 {
 
     /**
